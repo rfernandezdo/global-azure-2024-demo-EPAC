@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-set-definition-schema.json",
+  "name": "initiative1",
+  "properties": {
+    "displayName": "Initiative 1",
+    "description": "This initiative contains a set of policies for testing.",
+    "metadata": {
+      "category": "Test",
+      "gitHubPolicy": {
+        "commitSha": "da364f7f9e6f57eca37ce5ea92558e46d3e9ed24",
+        "filepath": "initiatives/initiative1",
+        "repoName": "rfernandezdo/global-azure-2024-demo1",
+        "runUrl": "https://github.com/rfernandezdo/global-azure-2024-demo1/actions/runs/8674813296",
+        "digest": "1e4345e631f5bb80ac485949967984f23c7c8ec0"
+      }
+    },
+    "version": "1.0.0",
+    "parameters": {
+      "tagName": {
+        "metadata": {
+          "description": "Name of the tag, such as 'environment'",
+          "displayName": "Tag Name"
+        },
+        "type": "String"
+      },
+      "tagValue": {
+        "metadata": {
+          "description": "Value of the tag, such as 'production'",
+          "displayName": "Tag Value"
+        },
+        "type": "String"
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "5790113114916927463",
+        "policyDefinitionName": "requite-tag-and-its-value",
+        "parameters": {
+          "effect": {
+            "value": "Deny"
+          },
+          "tagName": {
+            "value": "[parameters('tagName')]"
+          },
+          "tagValue": {
+            "value": "[parameters('tagValue')]"
+          }
+        },
+        "definitionVersion": "1.*.*"
+      }
+    ]
+  }
+}

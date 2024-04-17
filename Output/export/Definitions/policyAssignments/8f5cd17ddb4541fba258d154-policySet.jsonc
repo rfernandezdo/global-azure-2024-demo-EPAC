@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "/root",
+  "definitionEntry": {
+    "policySetName": "8f5cd17ddb4541fba258d154",
+    "displayName": null
+  },
+  "assignment": {
+    "name": "eebebac7b8bb45bb93fe92cb",
+    "displayName": "Initiative- Require a tag and its value",
+    "description": ""
+  },
+  "metadata": {
+    "assignedBy": "Rafael Fernández",
+    "parameterScopes": {}
+  },
+  "parameters": {
+    "Tag_Name": "environment",
+    "Tag_Value": "production"
+  },
+  "overrides": [],
+  "resourceSelectors": [],
+  "scope": {
+    "manage-azure-policy": [
+      "/subscriptions/45dd0cd2-808e-42ed-9e59-cd1a814ed8b1/resourceGroups/rg-testazurepolicy"
+    ]
+  }
+}
