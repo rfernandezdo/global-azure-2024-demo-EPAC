@@ -1,0 +1,43 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/global-settings-schema.json",
+    "pacOwnerId": "ff2ce5e1-da8a-4cfb-883b-aee9fbfb85d6",
+    "pacEnvironments": [
+        {
+            "pacSelector": "epac-dev",
+            "cloud": "AzureCloud",
+            "tenantId": "e18e4e7e-d0cc-40af-9907-84923ca55499",
+            "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/epac-dev",
+            "desiredState": {
+                "strategy": "full",
+                "keepDfcSecurityAssignments": false
+            },
+            "managedIdentityLocation": "france"
+        },
+        {
+            "pacSelector": "tenant",
+            "cloud": "AzureCloud",
+            "tenantId": "e18e4e7e-d0cc-40af-9907-84923ca55499",
+            "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/epac-prod",
+            "desiredState": {
+                "strategy": "full",
+                "keepDfcSecurityAssignments": false
+            },
+            "managedIdentityLocation": "france",
+            "globalNotScopes": [
+                
+            ]
+        },
+        {
+            "pacSelector": "manage-azure-policy",
+            "cloud": "AzureCloud",
+            "tenantId": "e18e4e7e-d0cc-40af-9907-84923ca55499",
+            "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/manage-azure-policy",
+            "desiredState": {
+                "strategy": "full",
+                "keepDfcSecurityAssignments": false
+            },
+            "managedIdentityLocation": "france"
+        }
+    ]
+
+}
