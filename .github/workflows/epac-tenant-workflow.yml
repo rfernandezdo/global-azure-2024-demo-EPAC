@@ -7,8 +7,8 @@ on:
       - main
 #    types:
 #      - closed
-#    paths:
-#      - 'Definitions/**'
+    paths:
+      - 'Definitions/**'
 
 env:
   PAC_OUTPUT_FOLDER: ./Output
