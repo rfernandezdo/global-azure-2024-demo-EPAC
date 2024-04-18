@@ -31,8 +31,7 @@ jobs:
     name: 'Remediate tenant environment'
     uses: ./.github/workflows/remediate.yml
     with:
-      pacEnvironmentSelector: tenant
-      #planGitHubEnvironment: TENANT-REMEDIATE-POLICY
+      pacEnvironmentSelector: tenant      
       planGitHubEnvironment: TENANT-DEPLOY-ROLES
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
