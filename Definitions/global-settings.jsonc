@@ -33,7 +33,7 @@
             "tenantId": "e18e4e7e-d0cc-40af-9907-84923ca55499",
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/manage-azure-policy",
             "desiredState": {
-                "strategy": "full",
+                "strategy": "ownedOnly",
                 "keepDfcSecurityAssignments": false
             },
             "managedIdentityLocation": "france"
