@@ -10,7 +10,8 @@
             "desiredState": {
                 "strategy": "full",
                 "keepDfcSecurityAssignments": true
-            }
+            },
+            "managedIdentityLocation": "westeurope"
         },
         {
             "pacSelector": "tenant",
@@ -21,6 +22,7 @@
                 "strategy": "full",
                 "keepDfcSecurityAssignments": true
             },
+            "managedIdentityLocation": "westeurope",
             "globalNotScopes": [                
             ]
         },
@@ -32,7 +34,8 @@
             "desiredState": {
                 "strategy": "ownedOnly",
                 "keepDfcSecurityAssignments": true
-            }
+            }            ,
+            "managedIdentityLocation": "westeurope"
         }
     ]
 
