@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-definition-schema.json",
-  "name": "requite-tag-and-its-value",
+  "name": "require-tag-and-its-value",
   "properties": {
     "displayName": "Require a tag and its value",
     "description": "This policy requires a specific tag and its value.",

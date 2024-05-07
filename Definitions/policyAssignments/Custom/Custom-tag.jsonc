@@ -13,7 +13,7 @@
         {
             "nodeName": "Tag",
             "assignment": {
-                "name": "requite-tag-and-its-value",
+                "name": "require-tag-and-its-value",
                 "displayName": "Require tag and its value",
                 "description": "Require a tag and its value on resources"
             },
@@ -22,7 +22,7 @@
             },
             "enforcementMode": "Default",
             "definitionEntry": {
-                "policyName": "requite-tag-and-its-value",
+                "policyName": "require-tag-and-its-value",
                 "displayName": "Require tag and its value"
             },
             "parameters": {
