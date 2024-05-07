@@ -10,8 +10,7 @@
             "desiredState": {
                 "strategy": "full",
                 "keepDfcSecurityAssignments": true
-            }//,
-//            "managedIdentityLocation": "france"
+            }
         },
         {
             "pacSelector": "tenant",
@@ -22,9 +21,7 @@
                 "strategy": "full",
                 "keepDfcSecurityAssignments": true
             },
-//            "managedIdentityLocation": "france",
-            "globalNotScopes": [
-                
+            "globalNotScopes": [                
             ]
         },
         {
@@ -35,8 +32,7 @@
             "desiredState": {
                 "strategy": "Owner",
                 "keepDfcSecurityAssignments": true
-            }//,
-//            "managedIdentityLocation": "france"
+            }
         }
     ]
 
