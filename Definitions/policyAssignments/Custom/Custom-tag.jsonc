@@ -26,12 +26,8 @@
                 "displayName": "Require tag and its value"
             },
             "parameters": {
-                "tagName": {
-                    "value": "Environment"
-                },
-                "tagValue": {
-                    "value": "Production"
-                },
+                "tagName": "Environment",
+                "tagValue": "Production",
                 "effect": "Deny"
             },
             "nonComplianceMessages": [
