@@ -1,0 +1,40 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+    "nodeName": "/Corp/",
+    "scope": {
+        "epac-dev": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/dev-corp"
+        ],
+        "tenant": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/prod-corp"
+        ]
+    },
+    "children": [
+        {
+            "nodeName": "Tag",
+            "assignment": {
+                "name": "req-tag-and-its-value",
+                "displayName": "Require tag and its value",
+                "description": "Require a tag and its value on resources"
+            },
+            "metadata": {
+                "category": "Custom"
+            },
+            "enforcementMode": "Default",
+            "definitionEntry": {
+                "policyName": "require-tag-and-its-value",
+                "displayName": "Require tag and its value"
+            },
+            "parameters": {
+                "tagName": "Environment",
+                "tagValue": "Production",
+                "effect": "Deny"
+            },
+            "nonComplianceMessages": [
+                {
+                    "message": "The tag 'Environment' must have a value of 'Production'."
+                }
+            ]
+        }
+    ]
+}
