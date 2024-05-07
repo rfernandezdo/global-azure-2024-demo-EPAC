@@ -13,7 +13,7 @@
         {
             "nodeName": "Tag",
             "assignment": {
-                "name": "require-tag-and-its-value",
+                "name": "req-tag-and-its-value",
                 "displayName": "Require tag and its value",
                 "description": "Require a tag and its value on resources"
             },
