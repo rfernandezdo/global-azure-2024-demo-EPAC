@@ -10,7 +10,7 @@
             "desiredState": {
                 "strategy": "full",
                 "keepDfcSecurityAssignments": true
-            },
+            }//,
 //            "managedIdentityLocation": "france"
         },
         {
@@ -35,7 +35,7 @@
             "desiredState": {
                 "strategy": "Owner",
                 "keepDfcSecurityAssignments": true
-            },
+            }//,
 //            "managedIdentityLocation": "france"
         }
     ]
