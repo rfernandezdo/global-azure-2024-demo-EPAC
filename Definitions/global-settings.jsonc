@@ -9,9 +9,9 @@
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/epac-dev",
             "desiredState": {
                 "strategy": "full",
-                "keepDfcSecurityAssignments": false
+                "keepDfcSecurityAssignments": true
             },
-            "managedIdentityLocation": "france"
+//            "managedIdentityLocation": "france"
         },
         {
             "pacSelector": "tenant",
@@ -20,9 +20,9 @@
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/epac-prod",
             "desiredState": {
                 "strategy": "full",
-                "keepDfcSecurityAssignments": false
+                "keepDfcSecurityAssignments": true
             },
-            "managedIdentityLocation": "france",
+//            "managedIdentityLocation": "france",
             "globalNotScopes": [
                 
             ]
@@ -33,10 +33,10 @@
             "tenantId": "e18e4e7e-d0cc-40af-9907-84923ca55499",
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/manage-azure-policy",
             "desiredState": {
-                "strategy": "full",
-                "keepDfcSecurityAssignments": false
+                "strategy": "Owner",
+                "keepDfcSecurityAssignments": true
             },
-            "managedIdentityLocation": "france"
+//            "managedIdentityLocation": "france"
         }
     ]
 
