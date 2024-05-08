@@ -1,0 +1,33 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+    "nodeName": "/Corp/",
+    "scope": {
+        "epac-dev": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/dev-corp"
+        ],
+        "tenant": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/prod-corp"
+        ]
+    },
+    "children": [
+        {
+            "nodeName": "Databases/",
+            "assignment": {
+                "name": "Init-CDB-jasl",
+                "displayName": "Iniciative CosmosDB.JASL.",
+                "description": "This initiative will help enforce and govern Cosmos DB.JASL."
+            },
+            "definitionEntry": {
+                "policySetName": "CDB-Init-jasl"
+            },
+            "parameters": {
+                "effectDisableLocalAuth": "Deny"
+            },
+            "nonComplianceMessages": [
+                {
+                    "message": "Iniciative NON Compliance. Asign Init-CDB-jasl."
+                }
+            ]
+        }
+    ]
+}
