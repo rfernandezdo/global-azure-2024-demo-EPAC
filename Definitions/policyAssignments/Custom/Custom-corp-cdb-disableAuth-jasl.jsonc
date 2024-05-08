@@ -13,7 +13,7 @@
         {
             "nodeName": "Databases/",
             "assignment": {
-                "name": "cdb-disable-localAuth-jasl",
+                "name": "cdb-disab-locAuth-jasl",
                 "displayName": "CDB Disable localAuth jasl Assign",
                 "description": "Disable local authentication methods so that your Cosmos DB database"
             },
