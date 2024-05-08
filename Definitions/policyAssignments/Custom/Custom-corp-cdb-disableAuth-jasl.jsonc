@@ -1,0 +1,38 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+    "nodeName": "/Corp/",
+    "scope": {
+        "epac-dev": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/dev-corp"
+        ],
+        "tenant": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/prod-corp"
+        ]
+    },
+    "children": [
+        {
+            "nodeName": "Databases/",
+            "assignment": {
+                "name": "cdb-disable-localAuth-jasl",
+                "displayName": "CDB Disable localAuth jasl Assign",
+                "description": "Disable local authentication methods so that your Cosmos DB database"
+            },
+            "metadata": {
+                "category": "Custom"
+            },
+            "enforcementMode": "Default",
+            "definitionEntry": {
+                "policyName": "cdb-disable-localAuth-jasl",
+                "displayName": "CDB Disable localAuth jasl"
+            },
+            "parameters": {
+                "effect": "Deny"
+            },
+            "nonComplianceMessages": [
+                {
+                    "message": "NON-Compliance for this: CDB Disable localAuth jasl."
+                }
+            ]
+        }
+    ]
+}
