@@ -11,7 +11,7 @@
     },
     "children": [
         {
-            "nodeName": "Tag",
+            "nodeName": "Tag/",
             "assignment": {
                 "name": "req-tag-and-its-value",
                 "displayName": "Require tag and its value",
