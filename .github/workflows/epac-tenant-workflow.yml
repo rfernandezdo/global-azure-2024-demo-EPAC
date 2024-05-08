@@ -1,14 +1,7 @@
 # This pipeline is used to deploy Policies, Initiative definitions and Assignments into Azure.
 name: EPAC Tenant Workflow
 
-on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - closed
-    paths:
-      - 'Definitions/**'
+on:  
   workflow_dispatch:
 
 env:
