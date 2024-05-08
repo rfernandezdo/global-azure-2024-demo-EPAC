@@ -1,0 +1,40 @@
+{
+  "name": "CDB-Init-jasl",
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "CDB-Init-jasl",
+    "description": "Iniciative Definition Cosmos DB policies. CDB. JASL.",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Databases"
+    },
+    "parameters": {
+      "effectDisableLocalAuth": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "cdb-disable-localAuth-jasl",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('effectDisableLocalAuth')]"
+          }
+        },
+        "groupNames": [],
+        "policyDefinitionName": "cdb-disable-localAuth-jasl"
+      }
+    ],
+    "policyDefinitionGroups": null
+  }
+}
