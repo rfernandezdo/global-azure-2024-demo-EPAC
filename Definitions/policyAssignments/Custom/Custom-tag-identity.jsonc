@@ -1,17 +1,19 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
-    "nodeName": "/manage-azure-policy/",
+    "nodeName": "/Identity/",
     "scope": {
-        "manage-azure-policy": [ // Replace with your EPAC environment name and validate the management group listed below exists
-            "/providers/Microsoft.Management/managementGroups/manage-azure-policy"
+        "epac-dev": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/dev-identity"
+        ],
+        "tenant": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/prod-identity"
         ]
-
     },
     "children": [
         {
             "nodeName": "Tag/",
             "assignment": {
-                "name": "req-tag-and-its-val-2",
+                "name": "req-tag-and-its-val-id",
                 "displayName": "Require tag and its value",
                 "description": "Require a tag and its value on resources"
             },
