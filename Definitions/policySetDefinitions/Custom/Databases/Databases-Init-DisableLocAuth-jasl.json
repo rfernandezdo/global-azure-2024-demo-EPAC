@@ -1,0 +1,63 @@
+{
+  "name": "Databases-Init-DisableLocAuth-jasl",
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "Databases-Init-DisableLocAuth-jasl",
+    "description": "Iniciative Definition Disable Local Auth CDB and MSS. JASL.",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Databases"
+    },
+    "parameters": {
+      "effectCDBDisableLocalAuth": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      },
+      "effectMSSDisableLocalAuth": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "cdb-disable-localAuth-jasl",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('effectCDBDisableLocalAuth')]"
+          }
+        },
+        "groupNames": [],
+        "policyDefinitionName": "cdb-disable-localAuth-jasl"
+      },
+      {
+        "policyDefinitionReferenceId": "MSS-disable-localAuth-jasl",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('effectMSSDisableLocalAuth')]"
+          }
+        },
+        "groupNames": [],
+        "policyDefinitionName": "MSS-disable-localAuth-jasl"
+      }
+    ],
+    "policyDefinitionGroups": null
+  }
+}
